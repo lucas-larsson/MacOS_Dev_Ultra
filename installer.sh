@@ -1,6 +1,16 @@
 
 # This is a script to install development tools for mac os x.
-# First step is to download the Mac OS X Developer Tools.
+# step one download HomeBrew which will install Xcode command line tools
 
-xcode-select --install  # Install Xcode command line tools. This is a must for the following steps.
-# should i install this through brew as well ?
+# Install Homebrew
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+
+# Install bundel 
+brew tap Homebrew/bundle
+
+# run brew bundle
+brew install bundle 
+
+# the bundle file is in the same directory as this script, but if is not the command will execute " brew install bundle ~ Brewfile"
+ 
+
