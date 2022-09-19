@@ -1,8 +1,10 @@
 
 # This is a script to install development tools for mac os x.
-# step one download HomeBrew which will install Xcode command line tools
 
-# Install Homebrew
+# installing oh my zsh and setting it as default shell
+sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+# Install Homebrew, it will install Xcode command line tools as well
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
 # Install bundel 
