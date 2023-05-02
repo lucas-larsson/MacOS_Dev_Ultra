@@ -11,7 +11,7 @@ sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.
 brew tap Homebrew/bundle
 
 # run brew bundle
-brew install bundle 
+brew bundle install 
 
 # the bundle file is in the same directory as this script, but if is not the command will execute " brew install bundle ~ Brewfile"
  
