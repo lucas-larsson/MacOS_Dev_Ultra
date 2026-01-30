@@ -1,0 +1,68 @@
+export PATH="$HOME/.config/custom-commands:$PATH"
+alias work="~/work"
+alias anaconda="source ~/.config/custom-commands/.conda_loading_script/.conda.zshrc"
+
+source <(fzf --zsh)
+# Use fd for file finding with fzf
+export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git  --exclude node_modules --exclude .venv --exclude Library --exclude .config'
+
+
+# Changing/making/removing directory
+setopt auto_cd
+setopt auto_pushd
+setopt pushd_ignore_dups
+setopt pushdminus
+
+alias -g ..='../'
+alias -g ...='../..'
+alias -g ....='../../..'
+alias -g .....='../../../..'
+alias -g ......='../../../../..'
+
+alias -- -='cd -'
+alias 1='cd -1'
+alias 2='cd -2'
+alias 3='cd -3'
+alias 4='cd -4'
+alias 5='cd -5'
+
+# List directory contents
+alias l='eza -lah'
+alias ll='eza -lh'
+
+# Git Alias
+alias gl='git pull'
+alias gp='git push'
+alias gs='git status'
+alias gd='git diff'
+alias gc='git commit'
+alias gco='git checkout'
+alias gcb='git checkout -b'
+alias gcm='git checkout master'
+alias gt='git restore .'
+alias glog='git log --graph --pretty=format:"%C(yellow)%h%Creset - %Cgreen%ad%Creset - %C(auto)%d%Creset %s %C(blue)[%an]%Creset" --date=short --max-count=20'
+
+# Add and commit all changes with an optional message
+gac() {
+  git add -A
+  if [ $# -eq 0 ]; then
+    echo -n "Commit message: "
+    read msg
+  else
+    msg="$*"
+  fi
+
+  if [ -z "$msg" ]; then
+    echo "❌ Aborting commit: empty message."
+    return 1
+  fi
+
+  git commit -m "$msg"
+}
+
+# Prevent system sleep
+alias awake='caffeinate -d'
+
+
+# Add this to the end of your ~/.zshrc file to source a local configuration file if it exists
+#  [[ -f ~/.zshrc.local ]] && source ~/.zshrc.local  
