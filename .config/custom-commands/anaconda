@@ -1,0 +1,2 @@
+#!/bin/sh
+source ~/.custom-commands/.conda_loading_script/.conda.zshrc
