@@ -4,11 +4,6 @@ anaconda() {
   eval "$(/opt/homebrew/anaconda3/bin/conda shell.zsh hook)"
 }
 
-source <(fzf --zsh)
-# Use fd for file finding with fzf
-export FZF_DEFAULT_COMMAND='fd --type f --hidden --follow --exclude .git  --exclude node_modules --exclude .venv --exclude Library --exclude .config'
-
-
 # Changing/making/removing directory
 setopt auto_cd
 setopt auto_pushd
