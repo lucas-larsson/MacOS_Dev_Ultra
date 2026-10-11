@@ -1,9 +1,0 @@
-#!/bin/sh
-echo "Updating..."
-brew update
-echo "Upgrading..."
-brew upgrade
-echo "Cleaning up..."
-brew cleanup --prune=all
-echo "Running health checks..."
-brew doctor
