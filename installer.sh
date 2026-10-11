@@ -7,9 +7,6 @@ SCRIPT_DIR="$(cd "$(dirname "$0")" && pwd)"
 # Install Homebrew, it will install Xcode command line tools as well
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-# Install bundel 
-brew tap Homebrew/bundle
-
 # run brew bundle
 brew bundle install --file="$SCRIPT_DIR/Brewfile"
 
